@@ -1,10 +1,3 @@
-'''
-Utilizei a lib instapy
-
-na linha 24, você vai passar o caminho de um arquivo que contenha os users que deseja
-
-esse codigo ira interagir com seguidores de determinados usuarios, curtir/comentar/seguir
-'''
 from instapy import InstaPy
 from instapy import smart_run
 

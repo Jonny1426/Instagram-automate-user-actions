@@ -6,14 +6,15 @@ insta_username = input(str("Username: ")) #Nome do usuario
 insta_password = input(str("Password: ")) # Senha do usuario
 
 '''Inicio de sessão no instapy '''
-session = InstaPy(username=insta_username, password=insta_password, headless_browser=False)# nome do usuario, senha do usuario, se o navegador vai ser exibido ou rodara em segundo plano
+session = InstaPy(username=insta_username, password=insta_password, headless_browser=False)
 
 
 with smart_run(session):
 
     ''' Definindo requisitos e limites para interagir '''
-    session.set_relationship_bounds(enabled=True, delimit_by_numbers=True, max_followers=6700, min_followers=30, min_following=57)#numero maximo de seguidores, numero minimo de seguidores, numero minimo de pessoas que a conta segue
-
+    session.set_relationship_bounds(enabled=True, delimit_by_numbers=True, max_followers=6700, min_followers=30, min_following=57)
+     
+        '''Aqui fazemos o programa interar com seguidores de usuarios do instagram, usernames se encontram em um arquivo txt'''   
     usuarios = open("usuarios.txt", "r")
     lista = usuarios.readlines()
     for user in lista:
